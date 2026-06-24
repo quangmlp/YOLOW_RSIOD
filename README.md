@@ -1,10 +1,10 @@
-# YOLO-IOD: Phát hiện Vật thể Lũy tiến Dựa trên YOLO-World
+# YOLOW-RSIOD: Phát hiện Vật thể Ảnh Vệ tinh trong Học Liên tục Dựa trên YOLO-World
 
 ## 🌟 Giới thiệu
 
-**YOLO-IOD** là một khung cấu trúc tiên tiến dành cho bài toán **Phát hiện Vật thể Lũy tiến (Incremental Object Detection - IOD)**, được phát triển dựa trên khả năng nhận diện tập từ vựng mở (open-vocabulary) mạnh mẽ của [YOLO-World](https://github.com/AILab-CVC/YOLO-World). 
+**YOLOW-RSIOD** là một khung cấu trúc tiên tiến dành cho bài toán **Phát hiện Vật thể Ảnh Vệ tinh trong Học Liên tục (Remote Sensing Incremental Object Detection - RSIOD)**, được phát triển dựa trên khả năng nhận diện tập từ vựng mở (open-vocabulary) mạnh mẽ của [YOLO-World](https://github.com/AILab-CVC/YOLO-World). 
 
-Khi học thêm các nhóm vật thể mới một cách lũy tiến, các bộ phát hiện truyền thống thường gặp phải hiện tượng "quên lãng thảm khốc" (catastrophic forgetting) đối với các lớp đã học trước đó. **YOLO-IOD** giải quyết thách thức này bằng cách giới thiệu:
+Khi học thêm các nhóm vật thể mới trong các kịch bản học liên tục, các bộ phát hiện truyền thống thường gặp phải hiện tượng "quên lãng thảm khốc" (catastrophic forgetting) đối với các lớp đã học trước đó. **YOLOW-RSIOD** giải quyết thách thức này bằng cách giới thiệu:
 - **Chưng cất tri thức đa phương thức (Multimodal Knowledge Distillation)**: Một phương pháp chưng cất chéo toàn diện (kết hợp chưng cất phân loại và chưng cất hồi quy hộp bao) giúp căn chỉnh các đặc trưng hình ảnh và ngôn ngữ.
 - **Gán nhãn giả mạnh mẽ (Robust Pseudo-Labeling)**: Tận dụng khả năng zero-shot mạnh mẽ của YOLO-World để tạo ra các nhãn giả có độ tin cậy cao cho các lớp cũ mà không cần sử dụng các hình ảnh gốc từ tập dữ liệu cũ.
 
@@ -95,7 +95,7 @@ data/
 
 ## 🚀 Huấn luyện & Đánh giá
 
-YOLO-IOD được huấn luyện lũy tiến qua nhiều giai đoạn (tác vụ - tasks).
+YOLOW-RSIOD được huấn luyện lũy tiến qua nhiều giai đoạn (tác vụ - tasks).
 Ví dụ: trong thiết lập **DIOR 10+10**, trước tiên bạn huấn luyện trên 10 lớp cơ sở (Task 0), sau đó huấn luyện tuần tự trên 10 lớp mới (Task 1).
 
 ### DIOR (10 + 10)
@@ -154,4 +154,4 @@ Script này sẽ huấn luyện tuần tự nhiều cấu hình khác nhau (Base
 Dự án này được phát hành theo các điều khoản trong tệp [LICENSE](LICENSE) đi kèm.
 
 ## 🎓 Trích dẫn & Ghi nhận
-YOLO-IOD tích hợp kiến trúc từ dự án [YOLO-World](https://github.com/AILab-CVC/YOLO-World) và [MMDetection](https://github.com/open-mmlab/mmdetection). Chúng tôi vô cùng trân trọng đóng góp mã nguồn mở của các tác giả.
+YOLOW-RSIOD tích hợp kiến trúc từ dự án [YOLO-World](https://github.com/AILab-CVC/YOLO-World) và [MMDetection](https://github.com/open-mmlab/mmdetection). Chúng tôi vô cùng trân trọng đóng góp mã nguồn mở của các tác giả.
